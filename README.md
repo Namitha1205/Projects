@@ -9,7 +9,7 @@ This project is a Java-based application that analyzes a given number series and
 #di+1​−di​=constant
 #Next Value Formula
 #nextDiff=dlast​+constant
-#nextValue=alast​+nextDiff
+nextValue=alast​+nextDiff
 #  Techniques Used
 #Array Traversal
 #Pattern Recognition
