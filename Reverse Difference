@@ -1,0 +1,43 @@
+import java.util.*;
+public class ReverseDifference {
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        System.out.println("Enter size:");
+	        int n = sc.nextInt();
+	        if(n < 3){
+	            System.out.println("Need at least 3 numbers");
+	            return;
+	        }
+	        int arr[] = new int[n];
+	        System.out.println("Enter elements:");
+	        for(int i = 0; i < n; i++){
+	            arr[i] = sc.nextInt();
+	        }
+	        int diff[] = new int[n - 1];
+	        System.out.print("Differences: ");
+	        for(int i = 0; i < n - 1; i++){
+	            diff[i] = arr[i+1] - arr[i];
+	            System.out.print(diff[i] + " ");
+	        }
+	        int d = diff[1] - diff[0];
+	        boolean isPattern = true;
+	        for(int i = 1; i < diff.length - 1; i++){
+	            if(diff[i+1] - diff[i] != d){
+	                isPattern = false;
+	                break;
+	            }
+	        }
+	        System.out.println();
+	        if(isPattern){
+	            int nextDiff = diff[diff.length - 1] + d;
+	            int nextValue = arr[n - 1] + nextDiff;
+	            System.out.println("Pattern detected: Reverse Difference");
+	            System.out.println("Difference changes by: " + d);
+	            System.out.println("Next difference: " + nextDiff);
+	            System.out.println("Next number: " + nextValue);
+	        } else {
+	            System.out.println("Pattern not detected");
+	        }
+	        sc.close();
+	    }
+	}
