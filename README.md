@@ -1,4 +1,4 @@
-#  Namitha1205 - Number-Series-Project
+#  Namitha1205 - Projects
 #  Reverse Difference Number Series Analyzer(Java)
 
 ## Project Idea
