@@ -139,3 +139,69 @@ To implement a simple ATM system using Java that demonstrates real-world banking
 - Java  
 - Eclipse IDE  
 
+---
+
+# Student Management System (Java)
+
+## Project Idea
+This project is a Java-based Student Management System that allows users to manage student records efficiently using a console-based interface. It supports adding, viewing, searching, updating, deleting, and analyzing student data.
+
+## Objective
+To develop a system that manages student information and demonstrates core programming concepts like data handling, sorting, and searching.
+
+---
+
+## Features
+
+### Core Features
+- Add student details  
+- Display all students  
+- Search student by ID  
+- Filter students based on marks  
+- Calculate average marks  
+- Sort students by marks (descending)  
+- Update student details  
+- Delete student records  
+- Menu-driven interface  
+
+## Concepts Used
+
+- Object-Oriented Programming (OOP)  
+- Classes and Objects  
+- ArrayList (Dynamic Data Storage)  
+- Lambda Expressions (for sorting & deletion)  
+- Conditional Statements  
+- Loops (do-while, for-each)  
+- User Input Handling using Scanner  
+
+## Data Structure Used
+
+- **ArrayList**
+  - Stores student records dynamically  
+  - Allows easy insertion, deletion, and traversal  
+
+## Project Structure
+
+- **Student Class**
+  - Attributes: studentId, name, age, course, marks  
+  - Methods:
+    - inputDetails()  
+    - displayDetails()  
+
+- **StudentManagementSystem Class**
+  - Handles all operations:
+    - Add  
+    - Display  
+    - Search  
+    - Filter  
+    - Average Calculation  
+    - Sort  
+    - Update  
+    - Delete  
+
+## Technologies Used
+
+- Java  
+- Eclipse IDE  
+
+---
