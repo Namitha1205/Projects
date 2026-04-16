@@ -207,7 +207,7 @@ To develop a system that manages student information and demonstrates core progr
 ---
 
 
-# ❌⭕ Tic Tac Toe Game (Java)
+# Tic Tac Toe Game (Java)
 
 ## Project Idea
 This project is a Java-based Tic Tac Toe game that allows two players to play against each other in a console-based interface. The game checks for a winner after each move and declares the result accordingly.
