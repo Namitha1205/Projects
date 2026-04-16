@@ -205,3 +205,61 @@ To develop a system that manages student information and demonstrates core progr
 - Eclipse IDE  
 
 ---
+
+
+# ❌⭕ Tic Tac Toe Game (Java)
+
+## Project Idea
+This project is a Java-based Tic Tac Toe game that allows two players to play against each other in a console-based interface. The game checks for a winner after each move and declares the result accordingly.
+
+## Objective
+To develop a simple interactive game using Java that demonstrates logic building, condition checking, and user interaction.
+
+## Features
+
+### Core Features
+- Two-player gameplay (X and O)  
+- 3x3 game board  
+- Input validation for row and column  
+- Prevents overwriting filled cells  
+- Automatic winner detection  
+- Draw detection when board is full  
+- Console-based interface  
+
+## Concepts Used
+
+- Arrays (2D Array for board)  
+- Conditional Statements  
+- Loops (for loop)  
+- Functions/Methods  
+- User Input Handling using Scanner  
+- Game Logic Implementation  
+
+## Game Logic
+
+- Players take turns placing X or O  
+- A player wins if:
+  - All 3 rows match  
+  - All 3 columns match  
+  - Any diagonal matches  
+- If all 9 moves are completed without a winner → Draw  
+
+## Project Structure
+
+- **Main Class: TicTacToe**
+  - Handles:
+    - Game loop  
+    - Player turns  
+    - Input handling  
+
+- **Methods**
+  - `initializeBoard()` → Initializes board with '-'  
+  - `printBoard()` → Displays board  
+  - `checkWinner()` → Checks winning condition  
+
+## Technologies Used
+
+- Java  
+- Eclipse IDE  
+
+---
