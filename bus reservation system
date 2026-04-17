@@ -1,0 +1,93 @@
+import java.util.*;
+class Passenger {
+    int seatNo;
+    String name;
+    Passenger(int seatNo, String name) {
+        this.seatNo = seatNo;
+        this.name = name;
+    }
+}
+public class BusReservationSystem {
+    static int totalSeats = 10;
+    static Passenger seats[] = new Passenger[totalSeats];
+    static Scanner sc = new Scanner(System.in);
+    // View seats
+    static void viewSeats() {
+        System.out.println("\nSeat Status:");
+        for(int i = 0; i < totalSeats; i++) {
+            if(seats[i] == null)
+                System.out.println("Seat " + (i+1) + " -> Available");
+            else
+                System.out.println("Seat " + (i+1) + " -> Booked (" + seats[i].name + ")");
+        }
+    }
+    // Book seat
+    static void bookSeat() {
+        System.out.print("Enter seat number (1-10): ");
+        int seatNo = sc.nextInt();
+
+        if(seatNo < 1 || seatNo > totalSeats) {
+            System.out.println("Invalid seat number!");
+            return;
+        }
+        if(seats[seatNo-1] == null) {
+            sc.nextLine();
+            System.out.print("Enter passenger name: ");
+            String name = sc.nextLine();
+            seats[seatNo-1] = new Passenger(seatNo, name);
+            System.out.println("Seat booked successfully!");
+        } else {
+            System.out.println("Seat already booked!");
+        }
+    }
+    // Cancel seat
+    static void cancelSeat() {
+        System.out.print("Enter seat number to cancel: ");
+        int seatNo = sc.nextInt();
+        if(seatNo < 1 || seatNo > totalSeats) {
+            System.out.println("Invalid seat number!");
+            return;
+        }
+        if(seats[seatNo-1] != null) {
+            seats[seatNo-1] = null;
+            System.out.println("Booking cancelled!");
+        } else {
+            System.out.println("Seat already empty!");
+        }
+    }
+    // View passengers
+    static void viewPassengers() {
+        System.out.println("\nPassenger List:");
+        boolean found = false;
+        for(Passenger p : seats) {
+            if(p != null) {
+                System.out.println("Seat " + p.seatNo + " -> " + p.name);
+                found = true;
+            }
+        }
+        if(!found)
+            System.out.println("No bookings yet.");
+    }
+    public static void main(String[] args) {
+        int choice;
+        do {
+            System.out.println("\n===== Bus Reservation Menu =====");
+            System.out.println("1. View Seats");
+            System.out.println("2. Book Seat");
+            System.out.println("3. Cancel Seat");
+            System.out.println("4. View Passengers");
+            System.out.println("5. Exit");
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+            switch(choice) {
+                case 1: viewSeats(); break;
+                case 2: bookSeat(); break;
+                case 3: cancelSeat(); break;
+                case 4: viewPassengers(); break;
+                case 5: System.out.println("Exiting..."); break;
+                default: System.out.println("Invalid choice!");
+            }
+        } while(choice != 5);
+        sc.close();
+    }
+}
